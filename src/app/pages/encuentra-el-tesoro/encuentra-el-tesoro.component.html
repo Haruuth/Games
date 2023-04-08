@@ -1,0 +1,21 @@
+<div>
+    <label for="filas">Filas:</label>
+    <input type="number" id="fila" [(ngModel)]="filas">
+  
+    <label for="columnas">Columnas:</label>
+    <input type="number" id="columna" [(ngModel)]="columnas">
+
+    <button (click)="pintarTabla($event)">EMPEZAR JUEGO</button>
+</div>
+
+<div *ngIf="tabla">
+  <table>
+      <tr *ngFor="let fila of filasArray; let i = index">
+          <td *ngFor="let columna of columnasArray; let j = index">
+              <div><img [src]="imagenSrc[i][j]" (click)="cambiarImagen(i, j)"></div>
+          </td>
+      </tr>
+  </table>
+
+  <div class="contador">Llevas {{contador}} clicks</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="padre">
+  <h1>TIPOS DE CAMBIOS</h1>
+  <input
+    type="number"
+    placeholder="{{ cambio === 0 ? '' : cambio }}"
+    [(ngModel)]="cambio"
+  />
+  <h3>ELIGE LA MONEDA</h3>
+  <div class="padre_hijo">
+    <select
+      class="selector"
+      *ngIf="exchanges"
+      (change)="cambioMoneda($event)"
+      [(ngModel)]="monedaPrincipal"
+    >
+      <option *ngFor="let options of exchanges" [value]="options.name">
+        {{ options.name }}
+      </option>
+    </select>
+  </div>
+  <div class="monedas" *ngIf="exchanges">
+    <div *ngFor="let coins of exchanges">
+      <div class="nombre">{{ coins.name }}</div>
+      <div class="valor">{{ (coins.value * cambio).toFixed(3) }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tablero{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 685px;
+    height: 685px;
+    align-items: center;
+    // border: 1px solid black;
+
+    .casilla{
+        border: 1px solid black;
+        display: flex;
+        margin-top: 18px;
+        
+    }
+}
+.tapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/GAMES/src/assets/topo/bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  

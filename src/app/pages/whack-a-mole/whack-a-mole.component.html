@@ -1,0 +1,18 @@
+<p>whack-a-mole works!</p>
+
+<div class="contenedor">
+  <h1>Whack a Mole</h1>
+  <div class="tablero">
+    <div class="casilla" *ngFor="let casilla of casillas" (click)="clickTopo($event, casilla)" [ngClass]="{ 'tiene-topo': casilla.tieneTopo }">
+      <div class="tapa" *ngIf="casilla.tieneTopo"></div>
+      <img *ngIf="casilla.tieneTopo" src="assets/topo/mole.png"/>
+      <img *ngIf="!casilla.tieneTopo" src="assets/topo/bg.jpg" />
+    </div>
+  </div>
+
+  <div class="invisible" (click)="sumarClic()">
+  </div>
+  
+  <button (click)="Init()">Iniciar</button>
+  <p>Tus clicks: {{ clicks }}</p>
+</div>
