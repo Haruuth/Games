@@ -9,7 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { WhackAMoleComponent } from './pages/whack-a-mole/whack-a-mole.component';
 import { CambioDeMonedaComponent } from './pages/cambio-de-moneda/cambio-de-moneda.component';
 import { SharedComponent } from './shared/shared.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ComponentsComponent } from './components/components.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MemoComponent } from './pages/memo/memo.component'
 
 
 
@@ -21,6 +24,9 @@ import { HttpClientModule } from '@angular/common/http'
     WhackAMoleComponent,
     CambioDeMonedaComponent,
     SharedComponent,
+    ComponentsComponent,
+    HeaderComponent,
+    MemoComponent,
     
 
 
@@ -35,4 +41,5 @@ import { HttpClientModule } from '@angular/common/http'
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

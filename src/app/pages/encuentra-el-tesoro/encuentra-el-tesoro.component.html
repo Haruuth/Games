@@ -1,4 +1,4 @@
-<div>
+<div class="cuadros">
     <label for="filas">Filas:</label>
     <input type="number" id="fila" [(ngModel)]="filas">
   
@@ -8,7 +8,7 @@
     <button (click)="pintarTabla($event)">EMPEZAR JUEGO</button>
 </div>
 
-<div *ngIf="tabla">
+<div class="tabla" *ngIf="tabla">
   <table>
       <tr *ngFor="let fila of filasArray; let i = index">
           <td *ngFor="let columna of columnasArray; let j = index">
@@ -17,5 +17,8 @@
       </tr>
   </table>
 
-  <div class="contador">Llevas {{contador}} clicks</div>
+</div>
+<div class="medio">
+<div class="contador">Llevas {{contador}} clicks</div>
+<button class="reset" (click)="resetearJuego()">Resetear Juego</button>
 </div>

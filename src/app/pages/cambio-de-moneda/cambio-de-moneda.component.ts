@@ -7,6 +7,8 @@ import { MonedasService } from 'src/app/shared/monedas.service';
   templateUrl: './cambio-de-moneda.component.html',
   styleUrls: ['./cambio-de-moneda.component.scss']
 })
+
+
 export class CambioDeMonedaComponent implements OnInit{
 
   exchanges: any = []

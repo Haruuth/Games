@@ -1,0 +1,77 @@
+
+.cuadros{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+
+input, button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 16px;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  button {
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .tabla {
+        display: flex;
+        justify-content: center;
+        border-collapse: collapse;
+        margin-top: 16px;
+    }
+  
+  table {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  
+  td {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+  }
+  
+  div img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .contador {
+    font-size: 24px;
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .medio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    color: #333;
+  }
+  .reset{
+    width: 150px;
+    justify-content: center;
+  }

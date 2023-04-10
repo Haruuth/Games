@@ -80,4 +80,17 @@ export class EncuentraElTesoroComponent {
 
     }
   }
+
+  resetearJuego() {
+    this.filas = null;
+    this.columnas = null;
+    this.filasArray = [];
+    this.columnasArray = [];
+    this.tabla = false;
+    this.imagenSrc = [];
+    this.imagenGanador = [];
+    this.contador = 0;
+    this.finJuego = false;
+  }
+  
 }

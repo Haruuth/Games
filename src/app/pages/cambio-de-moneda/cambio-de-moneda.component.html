@@ -1,5 +1,6 @@
 <div class="padre">
-  <h1>TIPOS DE CAMBIOS</h1>
+  <h1>CONVERSOR DE DIVISAS</h1>
+  <h3>IMPORTE</h3>
   <input
     type="number"
     placeholder="{{ cambio === 0 ? '' : cambio }}"
@@ -19,8 +20,10 @@
     </select>
   </div>
   <div class="monedas" *ngIf="exchanges">
-    <div *ngFor="let coins of exchanges">
+    <div class="monedas_size" *ngFor="let coins of exchanges">
+      <img class="bandera" src="../../../assets/monedas/{{coins.name}}.png"/>
       <div class="nombre">{{ coins.name }}</div>
+
       <div class="valor">{{ (coins.value * cambio).toFixed(3) }}</div>
     </div>
   </div>
